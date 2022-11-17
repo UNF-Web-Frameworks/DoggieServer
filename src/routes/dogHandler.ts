@@ -71,7 +71,7 @@ dogHandlerRouter.post('/login', (req, res) =>
             if (!err)
             {
                 let token = jwt.sign({ userName: user!.userName }, 'secret', { expiresIn: '1h' });
-                res.json({ token });
+                res.send({ token:token });
             }
             else
             {

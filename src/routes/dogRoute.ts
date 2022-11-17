@@ -10,7 +10,7 @@ dogRoute.get('/', (req, res) => {
 });
 // Create the rest of the Dog CRUD routes here
 dogRoute.post('/', (req, res) => {
-    let newDog = new Dog(req.body.name, req.body.breed, req.body.age);
+    let newDog = new Dog(req.body.name, req.body.breed, req.body.age,req.body.imageUrl);
     dogAry.push(newDog);
     res.json(newDog);
 });
