@@ -16,6 +16,7 @@ let routeArray= [
     }
 ];
 authMiddleware.use((req, res, next) => {
+    console.log(JSON.stringify(req.cookies));
     let route = routeArray.find(route => req.path.toUpperCase().includes(route.route));
     if (route) {
         let method = route.methods.find(method => method === req.method);
